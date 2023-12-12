@@ -1,4 +1,5 @@
 import SongItem from '../SongItem/SongItem';
+import './MusicTable.css';
 
 const MusicTable = ({ songs = [], searchFilter = '', onMusicDelete }) => {
     let songItems = songs;
@@ -20,7 +21,6 @@ const MusicTable = ({ songs = [], searchFilter = '', onMusicDelete }) => {
 
     return (
         <div>
-            <h2>Music Table</h2>
             <table className='table'>
                 <thead>
                     <tr>
@@ -30,6 +30,7 @@ const MusicTable = ({ songs = [], searchFilter = '', onMusicDelete }) => {
                         <th>Release Date</th>
                         <th>Genre</th>
                         <th>Likes</th>
+                        <th />
                     </tr>
                 </thead>
                 <tbody>{songItems}</tbody>

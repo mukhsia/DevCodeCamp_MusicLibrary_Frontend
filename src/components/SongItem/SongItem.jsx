@@ -26,7 +26,9 @@ const SongItem = ({ song = [], onMusicDelete }) => {
             <td>{song.likes}</td>
             <td>
                 <form onSubmit={handleDelete} className='flex-item'>
-                    <button type='submit'>Delete</button>
+                    <button type='submit' className='btn btn-danger'>
+                        Delete
+                    </button>
                 </form>
             </td>
         </tr>

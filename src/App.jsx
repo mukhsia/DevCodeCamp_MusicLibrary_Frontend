@@ -28,8 +28,8 @@ function App() {
     return (
         <div className='App'>
             <Header />
-            <div>
-                <div>
+            <div className='body-div p-5 d-flex justify-content-between flex-column'>
+                <div className='flex-container px-5 py-4 background-color-1'>
                     <SearchField
                         searchFilter={searchFilter}
                         onChange={setSearchFilter}
@@ -39,7 +39,8 @@ function App() {
                         searchFilter={searchFilter}
                         onMusicDelete={fetchMusic}
                     />
-
+                </div>
+                <div className='flex-container px-5 py-4 mt-5 background-color-2'>
                     <NewMusicForm onNewMusic={fetchMusic} />
                 </div>
             </div>

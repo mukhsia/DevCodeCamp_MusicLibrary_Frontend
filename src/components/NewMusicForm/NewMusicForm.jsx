@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import TextField from '../TextField/TextField';
 import axios from 'axios';
+import './NewMusicForm.css';
 
 const NewMusicForm = ({ onNewMusic }) => {
     const [title, setTitle] = useState('');
@@ -34,26 +35,27 @@ const NewMusicForm = ({ onNewMusic }) => {
     };
 
     return (
-        <form onSubmit={handleSubmit} className='flex-item'>
-            <h4>Add Movie</h4>
-            <div className='p-2'>
+        <form onSubmit={handleSubmit} className='form-group'>
+            <h4>Add to Music Library</h4>
+            <div className='py-4'>
                 <TextField label='Title' value={title} onChange={setTitle} />
-                <TextField label='artist' value={artist} onChange={setArtist} />
+                <TextField label='Artist' value={artist} onChange={setArtist} />
                 <TextField label='Album' value={album} onChange={setAlbum} />
 
                 <div className='mb-2'>
-                    <label>Release Date: </label>
+                    <label>Release Date</label>
                     <input
                         type='datetime-local'
                         value={releaseDate}
                         onChange={(e) => setReleaseDate(e.target.value)}
+                        className='datetime'
                     />
                 </div>
 
                 <TextField label='Genre' value={genre} onChange={setGenre} />
                 <div className='d-flex justify-content-end'>
-                    <button type='submit' className='btn btn-primary'>
-                        Add Movie
+                    <button type='submit' className='btn btn-primary mt-3'>
+                        Add Song
                     </button>
                 </div>
             </div>

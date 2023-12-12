@@ -4,9 +4,10 @@ const SearchField = ({ searchFilter, onChange }) => {
     return (
         <form>
             <TextField
-                label='Search:'
+                label='Search...'
                 value={searchFilter}
                 onChange={onChange}
+                hideLabel={true}
             />
         </form>
     );

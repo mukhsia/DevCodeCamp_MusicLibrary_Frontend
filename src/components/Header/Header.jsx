@@ -1,7 +1,9 @@
+import './Header.css';
+
 const Header = ({}) => {
     return (
-        <header>
-            <h2>Music Library</h2>
+        <header className='d-flex p-5'>
+            <h2 className='flex-item'>Music Library</h2>
         </header>
     );
 };
