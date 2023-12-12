@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Header from './components/Header/Header';
 import MusicTable from './components/MusicTable/MusicTable';
+import SearchField from './components/SearchField/SearchField';
 
 function App() {
     const [songs, setSongs] = useState([]);
@@ -28,7 +29,11 @@ function App() {
             <Header />
             <div>
                 <div>
-                    <MusicTable songs={songs} searchFilter='' />
+                    <SearchField
+                        searchFilter={searchFilter}
+                        onChange={setSearchFilter}
+                    />
+                    <MusicTable songs={songs} searchFilter={searchFilter} />
                 </div>
             </div>
         </div>
