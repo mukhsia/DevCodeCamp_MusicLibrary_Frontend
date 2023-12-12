@@ -31,7 +31,6 @@ const MusicTable = ({ songs = [], searchFilter = '', onMusicUpdate }) => {
                         <th>Genre</th>
                         <th>Likes</th>
                         <th />
-                        <th />
                     </tr>
                 </thead>
                 <tbody>{songItems}</tbody>
