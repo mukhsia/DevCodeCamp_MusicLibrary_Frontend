@@ -1,5 +1,4 @@
 import SongItem from '../SongItem/SongItem';
-import './MusicTable.css';
 
 const MusicTable = ({ songs = [], searchFilter = '', onMusicUpdate }) => {
     let songItems = songs;
