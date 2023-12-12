@@ -37,10 +37,10 @@ function App() {
                     <MusicTable
                         songs={songs}
                         searchFilter={searchFilter}
-                        onMusicDelete={fetchMusic}
+                        onMusicUpdate={fetchMusic}
                     />
                 </div>
-                <div className='flex-container px-5 py-4 mt-5 background-color-2'>
+                <div className='new-music-form flex-container px-5 py-4 mt-5 background-color-2'>
                     <NewMusicForm onNewMusic={fetchMusic} />
                 </div>
             </div>

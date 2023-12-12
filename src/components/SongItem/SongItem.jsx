@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const SongItem = ({ song = [], onMusicDelete }) => {
+const SongItem = ({ song = [], onMusicUpdate }) => {
     const handleDelete = async (e) => {
         e.preventDefault();
 
@@ -9,7 +9,7 @@ const SongItem = ({ song = [], onMusicDelete }) => {
                 `https://localhost:7215/api/Songs/${song.id}`
             );
             if (response.status === 204) {
-                onMusicDelete();
+                onMusicUpdate();
             }
         } catch (error) {
             console.warn('Error deleting Song:', error);

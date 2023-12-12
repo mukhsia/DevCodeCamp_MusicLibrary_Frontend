@@ -1,10 +1,16 @@
 .body-div {
     background-color: #00a6ed;
+    height: 100%;
 }
 
 .flex-container {
     background-color: #ffffff;
     border-radius: 5px;
+}
+
+.new-music-form {
+    min-width: 40%;
+    align-self: center;
 }
 
 .background-color-1 {

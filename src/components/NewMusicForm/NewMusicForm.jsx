@@ -37,7 +37,7 @@ const NewMusicForm = ({ onNewMusic }) => {
     return (
         <form onSubmit={handleSubmit} className='form-group'>
             <h4>Add to Music Library</h4>
-            <div className='py-4'>
+            <div className='py-2'>
                 <TextField label='Title' value={title} onChange={setTitle} />
                 <TextField label='Artist' value={artist} onChange={setArtist} />
                 <TextField label='Album' value={album} onChange={setAlbum} />

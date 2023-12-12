@@ -1,7 +1,7 @@
 import SongItem from '../SongItem/SongItem';
 import './MusicTable.css';
 
-const MusicTable = ({ songs = [], searchFilter = '', onMusicDelete }) => {
+const MusicTable = ({ songs = [], searchFilter = '', onMusicUpdate }) => {
     let songItems = songs;
     if (searchFilter) {
         songItems = songItems.filter(
@@ -16,7 +16,7 @@ const MusicTable = ({ songs = [], searchFilter = '', onMusicDelete }) => {
         );
     }
     songItems = songItems.map((song) => (
-        <SongItem song={song} key={song.id} onMusicDelete={onMusicDelete} />
+        <SongItem song={song} key={song.id} onMusicUpdate={onMusicUpdate} />
     ));
 
     return (
@@ -30,6 +30,7 @@ const MusicTable = ({ songs = [], searchFilter = '', onMusicDelete }) => {
                         <th>Release Date</th>
                         <th>Genre</th>
                         <th>Likes</th>
+                        <th />
                         <th />
                     </tr>
                 </thead>
