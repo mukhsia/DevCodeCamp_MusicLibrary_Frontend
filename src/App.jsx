@@ -1,11 +1,12 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
-import Header from './components/Header/Header';
 import axios from 'axios';
+import Header from './components/Header/Header';
 import MusicTable from './components/MusicTable/MusicTable';
 
 function App() {
     const [songs, setSongs] = useState([]);
+    const [searchFilter, setSearchFilter] = useState('');
 
     const fetchMusic = async () => {
         try {
@@ -26,7 +27,9 @@ function App() {
         <div className='App'>
             <Header />
             <div>
-                <MusicTable songs={songs} />
+                <div>
+                    <MusicTable songs={songs} searchFilter='' />
+                </div>
             </div>
         </div>
     );

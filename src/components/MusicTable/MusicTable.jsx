@@ -1,9 +1,21 @@
 import SongItem from '../SongItem/SongItem';
 
-const MusicTable = ({ songs = [] }) => {
-    const songItems = songs.map((song) => (
-        <SongItem song={song} key={song.id} />
-    ));
+const MusicTable = ({ songs = [], searchFilter = '' }) => {
+    let songItems = songs;
+    if (searchFilter) {
+        songItems = songItems.filter(
+            (song) =>
+                song.title.includes(searchFilter) ||
+                song.artist.includes(searchFilter) ||
+                song.album.includes(searchFilter) ||
+                song.genre.includes(searchFilter) ||
+                song.releaseDate.includes(searchFilter) ||
+                (parseInt(searchFilter) &&
+                    song.likes === parseInt(searchFilter))
+        );
+    }
+    songItems = songItems.map((song) => <SongItem song={song} key={song.id} />);
+
     return (
         <div>
             <h2>Music Table</h2>
