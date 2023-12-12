@@ -34,7 +34,11 @@ function App() {
                         searchFilter={searchFilter}
                         onChange={setSearchFilter}
                     />
-                    <MusicTable songs={songs} searchFilter={searchFilter} />
+                    <MusicTable
+                        songs={songs}
+                        searchFilter={searchFilter}
+                        onMusicDelete={fetchMusic}
+                    />
 
                     <NewMusicForm onNewMusic={fetchMusic} />
                 </div>

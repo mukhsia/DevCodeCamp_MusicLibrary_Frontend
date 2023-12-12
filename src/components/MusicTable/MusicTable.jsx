@@ -1,6 +1,6 @@
 import SongItem from '../SongItem/SongItem';
 
-const MusicTable = ({ songs = [], searchFilter = '' }) => {
+const MusicTable = ({ songs = [], searchFilter = '', onMusicDelete }) => {
     let songItems = songs;
     if (searchFilter) {
         songItems = songItems.filter(
@@ -14,7 +14,9 @@ const MusicTable = ({ songs = [], searchFilter = '' }) => {
                     song.likes === parseInt(searchFilter))
         );
     }
-    songItems = songItems.map((song) => <SongItem song={song} key={song.id} />);
+    songItems = songItems.map((song) => (
+        <SongItem song={song} key={song.id} onMusicDelete={onMusicDelete} />
+    ));
 
     return (
         <div>
