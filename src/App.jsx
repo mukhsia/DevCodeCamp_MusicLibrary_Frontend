@@ -4,6 +4,7 @@ import axios from 'axios';
 import Header from './components/Header/Header';
 import MusicTable from './components/MusicTable/MusicTable';
 import SearchField from './components/SearchField/SearchField';
+import NewMusicForm from './components/NewMusicForm/NewMusicForm';
 
 function App() {
     const [songs, setSongs] = useState([]);
@@ -34,6 +35,8 @@ function App() {
                         onChange={setSearchFilter}
                     />
                     <MusicTable songs={songs} searchFilter={searchFilter} />
+
+                    <NewMusicForm onNewMusic={fetchMusic} />
                 </div>
             </div>
         </div>
