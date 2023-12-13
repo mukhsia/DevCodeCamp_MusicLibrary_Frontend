@@ -20,8 +20,8 @@ const MusicTable = ({ songs = [], searchFilter = '', onMusicUpdate }) => {
 
     return (
         <div>
-            <table className='table'>
-                <thead>
+            <table className='table music-table'>
+                <thead className='thead-light'>
                     <tr>
                         <th>Title</th>
                         <th>Artist</th>
